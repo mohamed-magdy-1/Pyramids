@@ -233,12 +233,38 @@ window.onload = function () {
   rlod.style.display = "none";
 };
 
+
+
+
+
+
+
+
+
 // right click is disabled
 
-// document.oncontextmenu=function(e){
-//     e.preventDefault()
-//     window.alert("Sorry, right click is disabled")
-// }
+document.oncontextmenu=function(e){
+    e.preventDefault()
+    window.alert("Sorry, right click is disabled")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -390,18 +416,3 @@ window.onload = function () {
 
 
 
-//   let languageSelector = document.querySelector('.Earth');
-// let ar = document.querySelector(".ar")
-// let btn =document.querySelector(".button-glitch-2");
-// languageSelector.onclick= function(){
-//   languageSelector.classList.toggle("ar");
-
-// if(languageSelector.classList.contains("ar")){
-// btn.innerHTML ="من انا";
-// btn.style.fontSize='30px'
-// }else{
-  
-// }
-
-
-// };
