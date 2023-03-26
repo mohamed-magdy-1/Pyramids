@@ -1,0 +1,59 @@
+
+  
+  .map-container {
+    padding: 3.2rem 0.8rem;
+    position: relative;
+    display: inline-block;
+  }
+  .map-container img {
+    width: 100%;
+  }
+  .map-container .point {
+    cursor: pointer;
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--three-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 var(--pant-color);
+    animation: pulse 3s infinite;
+  }
+  .map-container .point:hover {
+    animation: none;
+    transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .map-container .Egypt {
+    top: 44%;
+    left: 58%;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--pant-color);
+    }
+    70% {
+      box-shadow: 0 0 0 25px rgba(246, 156, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(246, 156, 0, 0);
+    }
+  }
+
+
+  
+@media (max-width:477px) {
+
+.map-container .Egypt {
+  top: 65%;
+  left: 57%;
+}
+
+}
+
+
+
+  

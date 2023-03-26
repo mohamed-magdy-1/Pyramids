@@ -1,0 +1,72 @@
+
+.swiper {
+	width: 90%;
+	height: 70%;
+}
+
+@media (max-width: 767px) {
+	.swiper {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: blur(100px);
+	-webkit-filter: blur(100px);
+	transition: 0.5s ease ;
+	-webkit-transition: 0.5s ease ;
+	-moz-transition: 0.5s ease ;
+	-ms-transition: 0.5s ease ;
+	-o-transition: 0.5s ease ;
+}
+
+
+.swiper:hover .swiper-slide{
+		filter: blur(0px);
+	-webkit-filter: blur(0px);
+}
+
+.swiper .img-do-now img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.swiper:hover .img-do-now img{
+	display: none;
+}
+
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	object-fit: cover;
+
+}
+
+
+
+
+  .swiper-slide p {
+    position: absolute;
+    z-index: 5;
+    bottom: -22px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    height: 33%;
+  } 
+
+
+
