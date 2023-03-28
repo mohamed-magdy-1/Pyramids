@@ -1339,7 +1339,6 @@ width: 200px;
  /* start box-4 */
 .box-4 {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 
@@ -1379,10 +1378,7 @@ width: 200px;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   position: absolute;
-   left: 50%;
-   top: 75%;
-   transform: translate(-50%);
+   padding-top: 150px;
  }
 
  .box-4 .nums .num {
@@ -1542,7 +1538,8 @@ width: 200px;
    margin-top: 150px;
  }
 
- .box-5 .title-box-5 .help-center {
+ .box-5 .title-box-5 .help-center,
+ .label-solid{
    width: 100px;
    padding-bottom: 55px;
    padding-top: 30px;
@@ -1659,7 +1656,7 @@ width: 200px;
  @media (max-width:477px) {
 
    .box-5 {
-     padding-top: 300px;
+     padding-top: 200px;
    }
 
    .box-5 .card-box .card-pr .cont-card:nth-child(2),

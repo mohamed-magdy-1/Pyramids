@@ -7,6 +7,20 @@ menu.onclick = function () {
   nav.classList.toggle("none");
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // number
 
 let nums = document.querySelectorAll(".nums .num .number");
@@ -32,6 +46,22 @@ function startCount(el) {
   }, 2000 / goal);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Dark mod
 
 let dark = document.querySelector(".dark");
@@ -46,6 +76,7 @@ let imgWorld = document.querySelector(".imgWorld");
 let locationMark = document.getElementById("location-mark");
 let clockTime = document.querySelector(".clock-time");
 let bull = document.querySelector(".bull");
+let labelSolid = document.querySelector('.label-solid')
 
 function darkMood() {
   var setTheme = document.body;
@@ -66,7 +97,8 @@ function darkMood() {
     statistics.src = "./imag/10-analytics-outline (1).gif";
     imgWorld.src = "./imag/World Map dark.svg";
     locationMark.src = "./imag/18-location-pin-flat.gif";
-    clockTime.src = "../imag/45-clock-time-flat.gif";
+    clockTime.src = "./imag/45-clock-time-flat.gif";
+    labelSolid.src="./imag/146-label-solid.gif";
     bull.style.boxShadow = "0px 0px 20px 10px white";
     theme = "DARK";
   } else {
@@ -81,7 +113,8 @@ function darkMood() {
     statistics.src = "./imag/10-analytics-outline.gif";
     imgWorld.src = "./imag/World Map.svg";
     locationMark.src = "./imag/18-location-pin-flat (1).gif";
-    clockTime.src = "../imag/45-clock-time-flat (1).gif";
+    clockTime.src = "./imag/45-clock-time-flat (1).gif";
+    labelSolid.src= "./imag/146-label-solid (1).gif";
     bull.style.boxShadow = "none";
     theme = "LIGHT";
   }
@@ -104,9 +137,26 @@ if (GetTheme === "DARK") {
   statistics.src = "./imag/10-analytics-outline (1).gif";
   imgWorld.src = "./imag/World Map dark.svg";
   locationMark.src = "./imag/18-location-pin-flat.gif";
-  clockTime.src = "../imag/45-clock-time-flat.gif";
+  clockTime.src = "./imag/45-clock-time-flat.gif";
+  labelSolid.src="./imag/146-label-solid.gif";
   bull.style.boxShadow = "0px 0px 20px 10px white";
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // clock
 
@@ -159,6 +209,33 @@ function clock() {
   }, 1000);
 }
 clock();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  scrollreveal
 
@@ -225,6 +302,18 @@ ScrollReveal().reveal(".clock", {
 https://youtu.be/LZoPD2cNq-g?list=PLMJ9TxYWnU64vLm98d1Tw0jSR6Ih_xW60
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
 // onload لما يحمل الصافحه الاول
 
 let rlod = document.querySelector(".reload");
@@ -241,12 +330,22 @@ window.onload = function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
 // right click is disabled
 
-document.oncontextmenu=function(e){
-    e.preventDefault()
-    window.alert("Sorry, right click is disabled")
-}
+// document.oncontextmenu=function(e){
+//     e.preventDefault()
+//     window.alert("Sorry, right click is disabled")
+// }
 
 
 
@@ -268,7 +367,7 @@ document.oncontextmenu=function(e){
 
 
 
-
+/*
 
 // ترجمه
 
@@ -409,7 +508,7 @@ document.oncontextmenu=function(e){
 // }
   
 
-
+*/
 
 
 
