@@ -76,7 +76,7 @@ let imgWorld = document.querySelector(".imgWorld");
 let locationMark = document.getElementById("location-mark");
 let clockTime = document.querySelector(".clock-time");
 let bull = document.querySelector(".bull");
-let labelSolid = document.querySelector('.label-solid')
+let labelSolid = document.querySelector(".label-solid")
 
 function darkMood() {
   var setTheme = document.body;
