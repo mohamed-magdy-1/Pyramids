@@ -192,7 +192,7 @@ function clock() {
     document.querySelector(".op").innerText = "OPEN";
     document.querySelector(".op").style.color = "green";
   } else {
-    document.querySelector(".op").innerText = "COLES";
+    document.querySelector(".op").innerText = "CLOSED";
     document.querySelector(".op").style.color = "red";
   }
 
@@ -509,6 +509,7 @@ window.onload = function () {
   
 
 */
+
 
 
 
