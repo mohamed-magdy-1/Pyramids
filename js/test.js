@@ -14,21 +14,18 @@ menu.onclick = function () {
 
 
 
-
-
-
-
-
-
-
 // number
 
 let nums = document.querySelectorAll(".nums .num .number");
-let section = document.getElementById("statistics");
+let section = document.getElementById("id-box-4");
 let stared = false;
 
 window.onscroll = function () {
+      console.log(section.offsetTop);
+    console.log(section.getBoundingClientRect().top);
   if (window.scrollY >= section.offsetTop) {
+    
+
     if (!stared) {
       nums.forEach((number) => startCount(number));
     }
@@ -161,61 +158,40 @@ if (GetTheme === "DARK") {
 // clock
 
 
+
+
 function clock() {
-  let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let flag = "AM";
+  const now = new Date();
 
-  if (hours >= 12) {
-    hours = hours - 12;
-    flag = "PM";
-  }
-  if (hours == 0) {
-    hours = 12;
-  }
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
 
-  if (
-    (hours == 7 && flag == "AM") ||
-    (hours == 8 && flag == "AM") ||
-    (hours == 9 && flag == "AM") ||
-    (hours == 10 && flag == "AM") ||
-    (hours == 11 && flag == "AM") ||
-    (hours == 12 && flag == "PM") ||
-    (hours == 1 && flag == "PM") ||
-    (hours == 2 && flag == "PM") ||
-    (hours == 3 && flag == "PM") ||
-    (hours == 4 && flag == "PM") ||
-    (hours == 5 && flag == "PM")
-  ) {
-    document.querySelector(".op").innerText = "OPEN";
-    document.querySelector(".op").style.color = "green";
-  } else {
-    document.querySelector(".op").innerText = "CLOSED";
-    document.querySelector(".op").style.color = "red";
-  }
 
-  if (hours < 10) hours = "0" + hours;
-  if (minutes < 10) minutes = "0" + minutes;
-  if (seconds < 10) seconds = "0" + seconds;
+  const isOpen = hours >= 7 && hours < 17;
+
+  const statusEl = document.querySelector(".op");
+  statusEl.innerText = isOpen ? "OPEN" : "CLOSED";
+  statusEl.style.color = isOpen ? "green" : "red";
+
+
+  const flag = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+
+
+  hours = String(hours).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
 
   document.querySelector(".hours h2").innerText = hours;
   document.querySelector(".minutes h2").innerText = minutes;
   document.querySelector(".seconds h2").innerText = seconds;
   document.querySelector(".flag h2").innerText = flag;
-  setTimeout(function () {
-    clock();
-  }, 1000);
+
+  setTimeout(clock, 1000);
 }
+
 clock();
-
-
-
-
-
-
-
 
 
 
@@ -509,7 +485,6 @@ window.onload = function () {
   
 
 */
-
 
 
 
